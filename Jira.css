@@ -1,0 +1,25 @@
+/* Universal selector line no: 3 to 6 */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.jiraBoard{
+    display:flex;
+    justify-content: space-around;
+    padding:20px;
+}
+
+.column{
+    border:3px dashed green;
+    min-height:400px;
+    width:150px;
+    text-align: center;
+    padding:5px;
+}
+.card{
+    background-color: black;
+    color: wheat;
+    border: 1px solid red;
+}

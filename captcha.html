@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Captcha</title>
+  <script>
+    function generateCaptcha() {
+      var captcha = Math.random().toString(36).substr(2, 6); 
+      document.getElementById('captcha').innerHTML = captcha; 
+    }
+
+    function validateCaptcha() {
+      var userInput = document.getElementById('userInput').value.toLowerCase(); 
+      var captcha = document.getElementById('captcha').innerHTML.toLowerCase();
+       
+      if (userInput === captcha) {
+        alert('Captcha matched!'); 
+      } else {
+        alert('Captcha does not match. Please try again.'); 
+        generateCaptcha(); 
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="captcha"></div>
+  <input type="text" id="userInput" placeholder="Enter Captcha">
+  <button onclick="validateCaptcha()">Submit</button>
+  <button onclick="generateCaptcha()">Refresh Captcha</button>
+  <script>
+    generateCaptcha();
+  </script>
+</body>
+</html>
+
